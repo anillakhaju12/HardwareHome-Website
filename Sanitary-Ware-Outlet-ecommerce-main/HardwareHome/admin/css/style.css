@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto+Slab:wght@300&display=swap');
+
+:root {
+    --color: rgb(8, 132, 248);
+    --black: #040318;
+    --light-color: #666;
+    --box-shadow: .4rem .4rem .9rem grey;
+    --border: 2rem solid grey;
+    --outline: .1rem solid grey;
+}
+
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    padding: 0px;
+    margin: 0%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    background: #eee;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 3.5rem;
+    color: var(--black);
+}
+
+.heading span {
+    background: var(--color);
+    color: white;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.btn{
+ width: 90%;
+ height: 3rem;
+ margin: auto;
+ border-radius: .6rem ;
+cursor: pointer;
+ background: #fff;
+}
+
+.btn:hover{
+   color: #fff;
+   background: var(--color);
+}
+
+
+/* header part */
+
+.header div .fa-home{
+    height: 4.5rem;
+    width: 4.5rem;
+    color: var(--black);
+    font-size: 4rem;
+}
+
+.header div a {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: var(--black);
+    font-weight: bolder;
+}
+
+.header .navbar a {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    color: var(--black);
+    /* display: flex; */
+    /* background-color: rgb(218, 245, 247); */
+}
+
+.header .navbar a:hover {
+    color: var(--color);
+}
+
+
+
+.header .icons div {
+    /* border: .2px solid; */
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-right: .2rem;
+    line-height: 4.5rem;
+    border-radius: .9rem;
+    text-align: center;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+}
+
+
+
+.header .icons div:hover {
+    background-color: var(--color);
+    cursor: pointer;
+    color: white;
+    /* transition: all .2s ; */
+}
+
+
+
+#menu-btn {
+    display: none;
+}
+
+
+.header .navbar.active {
+    right: 2rem;
+    transition: 0.4s linear;
+}
+
+.log{
+   
+    box-shadow: var(--box-shadow);
+    z-index:1000;
+    border-radius: .6rem;
+    position: absolute;
+    top: 110%;
+    right:-110%;
+    width: 15rem;
+    height: 8rem;
+    background: #fff;
+    display: grid;
+}
+
+ .log.active {
+    right: 3rem;
+    transition: 0.4s linear;
+}
+
+ .log .btn{
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: black;
+    background: #eee;
+    
+}
+
+.log .btn:hover{
+    background: var(--color);
+    color: #fff;
+}
+
+
+.banner img{
+    position: relative;
+    background: cover;
+    width: 100%;
+    height: 67vh;
+}
+
+/* header part*/
+
+
+/* section  part*/
+
+.adminwel
+{
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+    padding: 2rem 0;
+    top: -5rem;
+}
+
+
+.update_section .upload_product{
+    margin: 4rem auto;
+    border: var(--black); 
+    border-radius: .9rem;
+    box-shadow: var(--box-shadow);
+    width: 70vw;
+
+}
+
+.update_section .upload_product .data{
+    
+    display: grid;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.update_section .upload_product .data h1
+{
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.update_section .upload_product .data label{
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+.update_section .upload_product .data .product{
+    border: var(--black);
+    padding: .8rem;
+    margin: 1rem;
+    border-radius: .9rem;
+
+}
+
+.update_section .upload_product .data .product:hover
+{
+    box-shadow: .4rem .4rem .9rem var(--color);
+}
+
+
+
+.list_section .list-container{
+    position: flex;
+    width: 90%;
+    margin: 4rem auto;
+}
+
+.list_section .list-container .productlist{
+    margin: auto;
+    width: 100%;
+    border-radius: .6rem;
+}
+
+.list_section .list-container .productlist .table_heading .heading{
+    border: 0px solid var(--black);
+    background: var(--color);
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: .6rem;
+
+}
+
+.list_section .list-container .productlist .table_body .body{
+    border: 0px solid var(--black);
+    text-align: center;
+    background: #fff;
+    border-radius: .6rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.list_section .list-container .productlist .table_body .image{
+    width:10%;
+}
+
+
+/* for order.php */
+
+.order_section{
+    margin: auto;
+    margin-top: 13rem;
+    text-align: center; 
+}
+
+.order_section .order_container{
+    margin: 4rem auto;
+    text-align: center;
+    
+}
+
+.order_section .order_container .orderlist{
+    margin: auto;
+    width: 100%;
+    border-radius: .6rem;
+}
+
+.order_section .order_container .heading{
+    padding:1rem;
+    font-size: 1.5rem;
+    border-top: 1px solid black;
+    border: 0px solid var(--black);
+    background: var(--color);
+    color: #fff;
+    text-align: center;
+    border-radius: .6rem;
+}
+
+.order_section .order_container .body{
+    padding:1rem;
+    font-size: 1.5rem;
+    border-top: 1px solid black;
+    border: 0px solid var(--black);
+    text-align: center;
+    background: #fff;
+    border-radius: .6rem;
+    color: black;
+}
+
+
+
+
+/* for order.php */
+
+/* for login page  */
+
+.login_container{
+    position:absolute;
+    width: 30rem;
+    height: 30rem;
+    top:50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: .9rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.login_container h1{
+    font-weight: bolder;
+    padding-bottom: 2rem;
+    margin: 3rem ;
+    border-bottom: var(--outline);
+}
+
+.login_container .input{
+    border: 1px solid silver;
+    margin: .5rem 1.5rem;
+    text-transform:none;
+    width: 90%;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    padding: .5rem .5rem;
+
+}
+
+.login_container .btn{
+    background: #eee;
+    padding: .5rem;
+    margin: .5rem 0rem;
+}
+
+.login_container .btn:hover{
+    background: var(--color);
+    color: #fff;
+}
+
+.login_container a,label,.span{
+    font-size: 1rem;
+    color: black;
+    margin: .5rem 0rem;
+    font-weight: 500;
+}
+
+.login_container a{
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 990px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 760px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        background: #fff
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 0rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+  
+}
