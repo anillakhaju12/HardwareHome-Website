@@ -1,19 +1,18 @@
-
 <?php
 include('config.php');
 session_start();
 
 
-$count=0;
-if(isset($_SESSION['cart']))
-{
- $count = count($_SESSION['cart']);
+$count = 0;
+if (isset($_SESSION['cart'])) {
+  $count = count($_SESSION['cart']);
 }
 ?>
 
 
 
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +24,7 @@ if(isset($_SESSION['cart']))
 <body>
   <header class="header">
     <div>
-    <a href="#"> <i class="fa fa-home" aria-hidden="true"> </i>HardwareHome</a>
+      <a href="#"> <i class="fa fa-home" aria-hidden="true"> </i>HardwareHome</a>
     </div>
     <nav class="navbar">
       <a href="#home" class="nav"> Home</a>
@@ -37,32 +36,33 @@ if(isset($_SESSION['cart']))
     <div class="icons">
       <div class="fa fa-bars" id="menu-btn"></div>
       <div class="fa fa-search" id="search-btn"></div>
-      <a href="cart.php"><div class="fa fa-shopping-cart" id="cart-btn"><span><?php echo $count?></span></div></a>
+      <a href="cart.php">
+        <div class="fa fa-shopping-cart" id="cart-btn"><span><?php echo $count ?></span></div>
+      </a>
       <div class="fa fa-user" id="login-btn"></div>
     </div>
 
-    <form class="search">
-      <input type="text" placeholder="search" id="searchbox" onkeyup="search()">
-      <label for="searchbox" class="fa fa-search" id="s-btn"></label>
+    <form class="search" action="search.php" method="GET">
+      <input type="text" placeholder="search" name="query" id="searchbox" onkeyup="search()">
+      <Button type="submit" class="fa fa-search" id="s-btn"></Button>
     </form>
 
+
     <form class="log">
-        <?php 
-          if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
-          {
-            echo"
+      <?php
+      if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+        echo "
             <h4 style='text-align:center; padding:1rem;'>Hello,  $_SESSION[name] </h4>
             <a href='logout.php' class='btn'>Logout</a>
           ";
 
-          }
-          else{
-            echo"
+      } else {
+        echo "
                 <a href='login.php'  class='btn'>Login</a>
                 <a href='register.php' class='btn'>Register</a>
             ";
-          }
-        ?>
+      }
+      ?>
     </form>
 
 
@@ -88,16 +88,16 @@ if(isset($_SESSION['cart']))
 
   </div>
 
-  
+
   <section class="section" id="product">
     <h1 class="heading">Buy <span>now</span></h1>
     <div class="list">
-        <?php
-         $conn =mysqli_connect('localhost','root','','hardwarehome');
-          $Record = mysqli_query($conn, "SELECT * FROM `product`");
-          while ($productsdata = mysqli_fetch_array($Record))
+      <?php
+      $conn = mysqli_connect('localhost', 'root', '', 'hardwarehome');
+      $Record = mysqli_query($conn, "SELECT * FROM `product`");
+      while ($productsdata = mysqli_fetch_array($Record))
 
-            echo "
+        echo "
             <form action='manage_cart.php' method='post'>
               <div class='item'>
                 <img src='../admin/$productsdata[product_image]' alt='image'>
@@ -109,7 +109,7 @@ if(isset($_SESSION['cart']))
               </div>
             </form>
             ";
-        ?>
+      ?>
     </div>
   </section>
 
@@ -120,8 +120,9 @@ if(isset($_SESSION['cart']))
       you're a DIY enthusiast, a professional contractor, or a business owner, we've got you covered with our extensive
       selection of top-notch hardware items.At HardwareHome, we understand the importance of reliable and durable
       hardware for any project, big or small. That's why we have carefully curated our inventory to include only the
-      best brands and products in the industry. From power tools and fasteners to plumbing supplies , we offer everything you need to tackle any project with confidence.<br> For <span><a
-          href="#contact">More Info</a></span></p>
+      best brands and products in the industry. From power tools and fasteners to plumbing supplies , we offer
+      everything you need to tackle any project with confidence.<br> For <span><a href="#contact">More Info</a></span>
+    </p>
   </section>
 
   <section class="contacts" id="contact">
@@ -166,7 +167,9 @@ if(isset($_SESSION['cart']))
       </div>
       <div class="checkout">
         <div class="total">Rs.0</div>
-        <a href="shipping.php"><div class="buy">Buy</div> </a>
+        <a href="shipping.php">
+          <div class="buy">Buy</div>
+        </a>
       </div>
     </div>
   </aside>

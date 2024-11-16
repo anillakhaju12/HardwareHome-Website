@@ -35,27 +35,27 @@ document.querySelector(`#login-btn`).onclick = () => {
 
 // this is for filter search
 
-function search() {
-    let filter = document.getElementById('searchbox').value.toUpperCase();
+// function search() {
+//     let filter = document.getElementById('searchbox').value.toUpperCase();
 
 
-    let itemlist = document.querySelectorAll('.item');
+//     let itemlist = document.querySelectorAll('.item');
 
-    let l = document.getElementsByTagName('h1');
+//     let l = document.getElementsByTagName('h1');
 
-    for (var i = 0; i <= l.length; i++) {
-        let a = itemlist[i].getElementsByTagName('h1')[0];
+//     for (var i = 0; i <= l.length; i++) {
+//         let a = itemlist[i].getElementsByTagName('h1')[0];
 
-        let value = a.innerHTML || a.innerText || a.textContent;
+//         let value = a.innerHTML || a.innerText || a.textContent;
 
-        if (value.toUpperCase().indexOf(filter) > -1) {
-            itemlist[i].style.display = "";
-        }
-        else {
-            itemlist[i].style.display = "None";
-        }
-    }
-}
+//         if (value.toUpperCase().indexOf(filter) > -1) {
+//             itemlist[i].style.display = "";
+//         }
+//         else {
+//             itemlist[i].style.display = "None";
+//         }
+//     }
+// }
 
 
 
