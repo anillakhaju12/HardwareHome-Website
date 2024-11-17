@@ -190,14 +190,14 @@ section {
 
 }
 
-.header .search label {
+.header .search #s-btn {
     font-size: 2rem;
     padding-right: .9rem;
     color: var(--black);
     cursor: pointer;
 }
 
- .search label:hover {
+ .search #s-btn:hover {
     color: var(--color)
 }
 
@@ -334,6 +334,7 @@ section {
     padding: 2rem;
     box-shadow: var(--box-shadow);
     letter-spacing: 1px;
+    max-width: 400px;
 }
 
 .section .list .item:hover {
